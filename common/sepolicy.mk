@@ -1,6 +1,6 @@
 #
 # This policy configuration will be used by all products that
-# inherit from Lineage
+# inherit from Wrath
 #
 
 ifeq ($(TARGET_COPY_OUT_VENDOR), vendor)
@@ -10,20 +10,20 @@ endif
 endif
 
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
-    device/lineage/sepolicy/common/public
+    device/wrath/sepolicy/common/public
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/lineage/sepolicy/common/private
+    device/wrath/sepolicy/common/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/lineage/sepolicy/common/dynamic \
-    device/lineage/sepolicy/common/system
+    device/wrath/sepolicy/common/dynamic \
+    device/wrath/sepolicy/common/system
 else
 BOARD_SEPOLICY_DIRS += \
-    device/lineage/sepolicy/common/dynamic \
-    device/lineage/sepolicy/common/vendor
+    device/wrath/sepolicy/common/dynamic \
+    device/wrath/sepolicy/common/vendor
 endif
 
 # Selectively include legacy rules defined by the products
--include device/lineage/sepolicy/legacy-common/sepolicy.mk
+-include device/wrath/sepolicy/legacy-common/sepolicy.mk
